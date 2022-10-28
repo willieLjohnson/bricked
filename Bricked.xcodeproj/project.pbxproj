@@ -7,17 +7,53 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		E381FDB2290C22C200CE0118 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E381FDB1290C22C200CE0118 /* AppDelegate.swift */; };
-		E381FDB4290C22C200CE0118 /* GameScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = E381FDB3290C22C200CE0118 /* GameScene.sks */; };
-		E381FDB6290C22C200CE0118 /* Actions.sks in Resources */ = {isa = PBXBuildFile; fileRef = E381FDB5290C22C200CE0118 /* Actions.sks */; };
-		E381FDB8290C22C200CE0118 /* GameScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = E381FDB7290C22C200CE0118 /* GameScene.swift */; };
-		E381FDBA290C22C200CE0118 /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E381FDB9290C22C200CE0118 /* GameViewController.swift */; };
-		E381FDBD290C22C200CE0118 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E381FDBB290C22C200CE0118 /* Main.storyboard */; };
+		35E45CD277CF412216FEE312 /* Pods_Bricked.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5CF9B3A68E2319869B12D617 /* Pods_Bricked.framework */; };
+		4530D2416E3F8360C56DC2BC /* Pods_BrickedTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 395DA1F7EF3FC13F51E14A0E /* Pods_BrickedTests.framework */; };
 		E381FDBF290C22C400CE0118 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E381FDBE290C22C400CE0118 /* Assets.xcassets */; };
-		E381FDC2290C22C400CE0118 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E381FDC0290C22C400CE0118 /* LaunchScreen.storyboard */; };
 		E381FDCC290C22C400CE0118 /* BrickedTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E381FDCB290C22C400CE0118 /* BrickedTests.swift */; };
 		E381FDD6290C22C400CE0118 /* BrickedUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E381FDD5290C22C400CE0118 /* BrickedUITests.swift */; };
 		E381FDD8290C22C400CE0118 /* BrickedUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E381FDD7290C22C400CE0118 /* BrickedUITestsLaunchTests.swift */; };
+		E381FDE8290C233100CE0118 /* Sounds in Resources */ = {isa = PBXBuildFile; fileRef = E381FDE7290C233100CE0118 /* Sounds */; };
+		E381FDED290C235300CE0118 /* GameOverScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = E381FDE9290C235300CE0118 /* GameOverScene.sks */; };
+		E381FDEE290C235300CE0118 /* GameScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = E381FDEA290C235300CE0118 /* GameScene.sks */; };
+		E381FDEF290C235300CE0118 /* GameStartScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = E381FDEB290C235300CE0118 /* GameStartScene.sks */; };
+		E381FDF0290C235300CE0118 /* Actions.sks in Resources */ = {isa = PBXBuildFile; fileRef = E381FDEC290C235300CE0118 /* Actions.sks */; };
+		E381FDF8290C239000CE0118 /* TetrisState.swift in Sources */ = {isa = PBXBuildFile; fileRef = E381FDF5290C239000CE0118 /* TetrisState.swift */; };
+		E381FDF9290C239000CE0118 /* PlayState.swift in Sources */ = {isa = PBXBuildFile; fileRef = E381FDF6290C239000CE0118 /* PlayState.swift */; };
+		E381FDFA290C239000CE0118 /* PauseState.swift in Sources */ = {isa = PBXBuildFile; fileRef = E381FDF7290C239000CE0118 /* PauseState.swift */; };
+		E381FDFF290C239C00CE0118 /* Polyomino.swift in Sources */ = {isa = PBXBuildFile; fileRef = E381FDFB290C239C00CE0118 /* Polyomino.swift */; };
+		E381FE00290C239C00CE0118 /* CGExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = E381FDFC290C239C00CE0118 /* CGExtensions.swift */; };
+		E381FE01290C239C00CE0118 /* Tetris.swift in Sources */ = {isa = PBXBuildFile; fileRef = E381FDFD290C239C00CE0118 /* Tetris.swift */; };
+		E381FE02290C239C00CE0118 /* PolyominoCreator.swift in Sources */ = {isa = PBXBuildFile; fileRef = E381FDFE290C239C00CE0118 /* PolyominoCreator.swift */; };
+		E381FE0E290C23A500CE0118 /* RuleComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = E381FE03290C23A400CE0118 /* RuleComponent.swift */; };
+		E381FE0F290C23A500CE0118 /* ArenaComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = E381FE04290C23A400CE0118 /* ArenaComponent.swift */; };
+		E381FE10290C23A500CE0118 /* CroppingComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = E381FE05290C23A400CE0118 /* CroppingComponent.swift */; };
+		E381FE11290C23A500CE0118 /* SpriteComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = E381FE06290C23A400CE0118 /* SpriteComponent.swift */; };
+		E381FE12290C23A500CE0118 /* RotationComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = E381FE07290C23A400CE0118 /* RotationComponent.swift */; };
+		E381FE13290C23A500CE0118 /* FixedMoveComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = E381FE08290C23A400CE0118 /* FixedMoveComponent.swift */; };
+		E381FE14290C23A500CE0118 /* SpawnAreaComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = E381FE09290C23A400CE0118 /* SpawnAreaComponent.swift */; };
+		E381FE15290C23A500CE0118 /* PolyominoComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = E381FE0A290C23A500CE0118 /* PolyominoComponent.swift */; };
+		E381FE16290C23A500CE0118 /* CompositeSpriteComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = E381FE0B290C23A500CE0118 /* CompositeSpriteComponent.swift */; };
+		E381FE17290C23A500CE0118 /* LabelComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = E381FE0C290C23A500CE0118 /* LabelComponent.swift */; };
+		E381FE18290C23A500CE0118 /* CollisionCheckingComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = E381FE0D290C23A500CE0118 /* CollisionCheckingComponent.swift */; };
+		E381FE1F290C23AD00CE0118 /* EntityManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E381FE19290C23AD00CE0118 /* EntityManager.swift */; };
+		E381FE20290C23AD00CE0118 /* ScoreEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = E381FE1A290C23AD00CE0118 /* ScoreEntity.swift */; };
+		E381FE21290C23AD00CE0118 /* TetrisEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = E381FE1B290C23AD00CE0118 /* TetrisEntity.swift */; };
+		E381FE22290C23AD00CE0118 /* PolyominoEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = E381FE1C290C23AD00CE0118 /* PolyominoEntity.swift */; };
+		E381FE23290C23AD00CE0118 /* SpawnAreaEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = E381FE1D290C23AD00CE0118 /* SpawnAreaEntity.swift */; };
+		E381FE24290C23AD00CE0118 /* ArenaEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = E381FE1E290C23AD00CE0118 /* ArenaEntity.swift */; };
+		E381FE28290C23D200CE0118 /* GameConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = E381FE25290C23D200CE0118 /* GameConstants.swift */; };
+		E381FE29290C23D200CE0118 /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E381FE26290C23D200CE0118 /* GameViewController.swift */; };
+		E381FE2A290C23D200CE0118 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E381FE27290C23D200CE0118 /* AppDelegate.swift */; };
+		E381FE2C290C23F000CE0118 /* TetrisCellTextures.atlas in Resources */ = {isa = PBXBuildFile; fileRef = E381FE2B290C23F000CE0118 /* TetrisCellTextures.atlas */; };
+		E381FE2F290C240800CE0118 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E381FE2D290C240800CE0118 /* LaunchScreen.storyboard */; };
+		E381FE30290C240800CE0118 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E381FE2E290C240800CE0118 /* Main.storyboard */; };
+		E381FE34290C243800CE0118 /* GameOverScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = E381FE31290C243800CE0118 /* GameOverScene.swift */; };
+		E381FE35290C243800CE0118 /* GameScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = E381FE32290C243800CE0118 /* GameScene.swift */; };
+		E381FE36290C243800CE0118 /* GameStartScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = E381FE33290C243800CE0118 /* GameStartScene.swift */; };
+		E381FE3A290C25EE00CE0118 /* SpriteKit+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = E381FE38290C25EE00CE0118 /* SpriteKit+Extensions.swift */; };
+		E381FE3B290C25EE00CE0118 /* SFIcons.swift in Sources */ = {isa = PBXBuildFile; fileRef = E381FE39290C25EE00CE0118 /* SFIcons.swift */; };
+		FA626FAB461D5CFC55CB0898 /* Pods_Bricked_BrickedUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B06002863381A54F8E1AF38A /* Pods_Bricked_BrickedUITests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,20 +74,62 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		395DA1F7EF3FC13F51E14A0E /* Pods_BrickedTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BrickedTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		53677E13BF261AD3F396AED6 /* Pods-Bricked.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Bricked.release.xcconfig"; path = "Target Support Files/Pods-Bricked/Pods-Bricked.release.xcconfig"; sourceTree = "<group>"; };
+		5CF9B3A68E2319869B12D617 /* Pods_Bricked.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Bricked.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		8B78819D9107F96D06E9A678 /* Pods-BrickedTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BrickedTests.release.xcconfig"; path = "Target Support Files/Pods-BrickedTests/Pods-BrickedTests.release.xcconfig"; sourceTree = "<group>"; };
+		91689C9E5FE695F5D79C963C /* Pods-Bricked-BrickedUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Bricked-BrickedUITests.release.xcconfig"; path = "Target Support Files/Pods-Bricked-BrickedUITests/Pods-Bricked-BrickedUITests.release.xcconfig"; sourceTree = "<group>"; };
+		A3A552095D35E0BCF7563E0D /* Pods-Bricked.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Bricked.debug.xcconfig"; path = "Target Support Files/Pods-Bricked/Pods-Bricked.debug.xcconfig"; sourceTree = "<group>"; };
+		B06002863381A54F8E1AF38A /* Pods_Bricked_BrickedUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Bricked_BrickedUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B648374BB6AA8FFCC9A056E4 /* Pods-BrickedTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BrickedTests.debug.xcconfig"; path = "Target Support Files/Pods-BrickedTests/Pods-BrickedTests.debug.xcconfig"; sourceTree = "<group>"; };
+		D538716E8247D09C7F98DC0A /* Pods-Bricked-BrickedUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Bricked-BrickedUITests.debug.xcconfig"; path = "Target Support Files/Pods-Bricked-BrickedUITests/Pods-Bricked-BrickedUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		E381FDAE290C22C200CE0118 /* Bricked.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Bricked.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		E381FDB1290C22C200CE0118 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		E381FDB3290C22C200CE0118 /* GameScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = GameScene.sks; sourceTree = "<group>"; };
-		E381FDB5290C22C200CE0118 /* Actions.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = Actions.sks; sourceTree = "<group>"; };
-		E381FDB7290C22C200CE0118 /* GameScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameScene.swift; sourceTree = "<group>"; };
-		E381FDB9290C22C200CE0118 /* GameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameViewController.swift; sourceTree = "<group>"; };
-		E381FDBC290C22C200CE0118 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		E381FDBE290C22C400CE0118 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		E381FDC1290C22C400CE0118 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E381FDC7290C22C400CE0118 /* BrickedTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BrickedTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		E381FDCB290C22C400CE0118 /* BrickedTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrickedTests.swift; sourceTree = "<group>"; };
 		E381FDD1290C22C400CE0118 /* BrickedUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BrickedUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		E381FDD5290C22C400CE0118 /* BrickedUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrickedUITests.swift; sourceTree = "<group>"; };
 		E381FDD7290C22C400CE0118 /* BrickedUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrickedUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		E381FDE7290C233100CE0118 /* Sounds */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Sounds; sourceTree = "<group>"; };
+		E381FDE9290C235300CE0118 /* GameOverScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = GameOverScene.sks; sourceTree = "<group>"; };
+		E381FDEA290C235300CE0118 /* GameScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = GameScene.sks; sourceTree = "<group>"; };
+		E381FDEB290C235300CE0118 /* GameStartScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = GameStartScene.sks; sourceTree = "<group>"; };
+		E381FDEC290C235300CE0118 /* Actions.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = Actions.sks; sourceTree = "<group>"; };
+		E381FDF5290C239000CE0118 /* TetrisState.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TetrisState.swift; sourceTree = "<group>"; };
+		E381FDF6290C239000CE0118 /* PlayState.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlayState.swift; sourceTree = "<group>"; };
+		E381FDF7290C239000CE0118 /* PauseState.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PauseState.swift; sourceTree = "<group>"; };
+		E381FDFB290C239C00CE0118 /* Polyomino.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Polyomino.swift; sourceTree = "<group>"; };
+		E381FDFC290C239C00CE0118 /* CGExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CGExtensions.swift; sourceTree = "<group>"; };
+		E381FDFD290C239C00CE0118 /* Tetris.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Tetris.swift; sourceTree = "<group>"; };
+		E381FDFE290C239C00CE0118 /* PolyominoCreator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PolyominoCreator.swift; sourceTree = "<group>"; };
+		E381FE03290C23A400CE0118 /* RuleComponent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RuleComponent.swift; sourceTree = "<group>"; };
+		E381FE04290C23A400CE0118 /* ArenaComponent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ArenaComponent.swift; sourceTree = "<group>"; };
+		E381FE05290C23A400CE0118 /* CroppingComponent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CroppingComponent.swift; sourceTree = "<group>"; };
+		E381FE06290C23A400CE0118 /* SpriteComponent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpriteComponent.swift; sourceTree = "<group>"; };
+		E381FE07290C23A400CE0118 /* RotationComponent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RotationComponent.swift; sourceTree = "<group>"; };
+		E381FE08290C23A400CE0118 /* FixedMoveComponent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FixedMoveComponent.swift; sourceTree = "<group>"; };
+		E381FE09290C23A400CE0118 /* SpawnAreaComponent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpawnAreaComponent.swift; sourceTree = "<group>"; };
+		E381FE0A290C23A500CE0118 /* PolyominoComponent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PolyominoComponent.swift; sourceTree = "<group>"; };
+		E381FE0B290C23A500CE0118 /* CompositeSpriteComponent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CompositeSpriteComponent.swift; sourceTree = "<group>"; };
+		E381FE0C290C23A500CE0118 /* LabelComponent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LabelComponent.swift; sourceTree = "<group>"; };
+		E381FE0D290C23A500CE0118 /* CollisionCheckingComponent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CollisionCheckingComponent.swift; sourceTree = "<group>"; };
+		E381FE19290C23AD00CE0118 /* EntityManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EntityManager.swift; sourceTree = "<group>"; };
+		E381FE1A290C23AD00CE0118 /* ScoreEntity.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScoreEntity.swift; sourceTree = "<group>"; };
+		E381FE1B290C23AD00CE0118 /* TetrisEntity.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TetrisEntity.swift; sourceTree = "<group>"; };
+		E381FE1C290C23AD00CE0118 /* PolyominoEntity.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PolyominoEntity.swift; sourceTree = "<group>"; };
+		E381FE1D290C23AD00CE0118 /* SpawnAreaEntity.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpawnAreaEntity.swift; sourceTree = "<group>"; };
+		E381FE1E290C23AD00CE0118 /* ArenaEntity.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ArenaEntity.swift; sourceTree = "<group>"; };
+		E381FE25290C23D200CE0118 /* GameConstants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameConstants.swift; sourceTree = "<group>"; };
+		E381FE26290C23D200CE0118 /* GameViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameViewController.swift; sourceTree = "<group>"; };
+		E381FE27290C23D200CE0118 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		E381FE2B290C23F000CE0118 /* TetrisCellTextures.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = TetrisCellTextures.atlas; sourceTree = "<group>"; };
+		E381FE2D290C240800CE0118 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
+		E381FE2E290C240800CE0118 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		E381FE31290C243800CE0118 /* GameOverScene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameOverScene.swift; sourceTree = "<group>"; };
+		E381FE32290C243800CE0118 /* GameScene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameScene.swift; sourceTree = "<group>"; };
+		E381FE33290C243800CE0118 /* GameStartScene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameStartScene.swift; sourceTree = "<group>"; };
+		E381FE38290C25EE00CE0118 /* SpriteKit+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "SpriteKit+Extensions.swift"; sourceTree = "<group>"; };
+		E381FE39290C25EE00CE0118 /* SFIcons.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SFIcons.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,6 +137,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				35E45CD277CF412216FEE312 /* Pods_Bricked.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -66,6 +145,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4530D2416E3F8360C56DC2BC /* Pods_BrickedTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -73,12 +153,36 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FA626FAB461D5CFC55CB0898 /* Pods_Bricked_BrickedUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		9705F18EDFF04139F75C42F0 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				5CF9B3A68E2319869B12D617 /* Pods_Bricked.framework */,
+				B06002863381A54F8E1AF38A /* Pods_Bricked_BrickedUITests.framework */,
+				395DA1F7EF3FC13F51E14A0E /* Pods_BrickedTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		BEC175FB1CA37C6D2C180CD0 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				A3A552095D35E0BCF7563E0D /* Pods-Bricked.debug.xcconfig */,
+				53677E13BF261AD3F396AED6 /* Pods-Bricked.release.xcconfig */,
+				D538716E8247D09C7F98DC0A /* Pods-Bricked-BrickedUITests.debug.xcconfig */,
+				91689C9E5FE695F5D79C963C /* Pods-Bricked-BrickedUITests.release.xcconfig */,
+				B648374BB6AA8FFCC9A056E4 /* Pods-BrickedTests.debug.xcconfig */,
+				8B78819D9107F96D06E9A678 /* Pods-BrickedTests.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		E381FDA5290C22C200CE0118 = {
 			isa = PBXGroup;
 			children = (
@@ -86,6 +190,8 @@
 				E381FDCA290C22C400CE0118 /* BrickedTests */,
 				E381FDD4290C22C400CE0118 /* BrickedUITests */,
 				E381FDAF290C22C200CE0118 /* Products */,
+				BEC175FB1CA37C6D2C180CD0 /* Pods */,
+				9705F18EDFF04139F75C42F0 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -102,14 +208,14 @@
 		E381FDB0290C22C200CE0118 /* Bricked */ = {
 			isa = PBXGroup;
 			children = (
-				E381FDB1290C22C200CE0118 /* AppDelegate.swift */,
-				E381FDB3290C22C200CE0118 /* GameScene.sks */,
-				E381FDB5290C22C200CE0118 /* Actions.sks */,
-				E381FDB7290C22C200CE0118 /* GameScene.swift */,
-				E381FDB9290C22C200CE0118 /* GameViewController.swift */,
-				E381FDBB290C22C200CE0118 /* Main.storyboard */,
-				E381FDBE290C22C400CE0118 /* Assets.xcassets */,
-				E381FDC0290C22C400CE0118 /* LaunchScreen.storyboard */,
+				E381FE37290C25D700CE0118 /* Helpers */,
+				E381FDF4290C237A00CE0118 /* Polymino */,
+				E381FDF3290C236C00CE0118 /* Components */,
+				E381FDF2290C236400CE0118 /* Entities */,
+				E381FDF1290C235C00CE0118 /* States */,
+				E381FDE5290C22F300CE0118 /* Scenes */,
+				E381FDE4290C22D200CE0118 /* Supporting Files */,
+				E381FDE6290C230700CE0118 /* Game */,
 			);
 			path = Bricked;
 			sourceTree = "<group>";
@@ -131,6 +237,103 @@
 			path = BrickedUITests;
 			sourceTree = "<group>";
 		};
+		E381FDE4290C22D200CE0118 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				E381FE2B290C23F000CE0118 /* TetrisCellTextures.atlas */,
+				E381FDE7290C233100CE0118 /* Sounds */,
+				E381FDEC290C235300CE0118 /* Actions.sks */,
+				E381FDE9290C235300CE0118 /* GameOverScene.sks */,
+				E381FDEA290C235300CE0118 /* GameScene.sks */,
+				E381FE2D290C240800CE0118 /* LaunchScreen.storyboard */,
+				E381FE2E290C240800CE0118 /* Main.storyboard */,
+				E381FDEB290C235300CE0118 /* GameStartScene.sks */,
+				E381FDBE290C22C400CE0118 /* Assets.xcassets */,
+			);
+			path = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		E381FDE5290C22F300CE0118 /* Scenes */ = {
+			isa = PBXGroup;
+			children = (
+				E381FE31290C243800CE0118 /* GameOverScene.swift */,
+				E381FE32290C243800CE0118 /* GameScene.swift */,
+				E381FE33290C243800CE0118 /* GameStartScene.swift */,
+			);
+			path = Scenes;
+			sourceTree = "<group>";
+		};
+		E381FDE6290C230700CE0118 /* Game */ = {
+			isa = PBXGroup;
+			children = (
+				E381FE27290C23D200CE0118 /* AppDelegate.swift */,
+				E381FE25290C23D200CE0118 /* GameConstants.swift */,
+				E381FE26290C23D200CE0118 /* GameViewController.swift */,
+			);
+			path = Game;
+			sourceTree = "<group>";
+		};
+		E381FDF1290C235C00CE0118 /* States */ = {
+			isa = PBXGroup;
+			children = (
+				E381FDF7290C239000CE0118 /* PauseState.swift */,
+				E381FDF6290C239000CE0118 /* PlayState.swift */,
+				E381FDF5290C239000CE0118 /* TetrisState.swift */,
+			);
+			path = States;
+			sourceTree = "<group>";
+		};
+		E381FDF2290C236400CE0118 /* Entities */ = {
+			isa = PBXGroup;
+			children = (
+				E381FE1E290C23AD00CE0118 /* ArenaEntity.swift */,
+				E381FE19290C23AD00CE0118 /* EntityManager.swift */,
+				E381FE1C290C23AD00CE0118 /* PolyominoEntity.swift */,
+				E381FE1A290C23AD00CE0118 /* ScoreEntity.swift */,
+				E381FE1D290C23AD00CE0118 /* SpawnAreaEntity.swift */,
+				E381FE1B290C23AD00CE0118 /* TetrisEntity.swift */,
+			);
+			path = Entities;
+			sourceTree = "<group>";
+		};
+		E381FDF3290C236C00CE0118 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				E381FE04290C23A400CE0118 /* ArenaComponent.swift */,
+				E381FE0D290C23A500CE0118 /* CollisionCheckingComponent.swift */,
+				E381FE0B290C23A500CE0118 /* CompositeSpriteComponent.swift */,
+				E381FE05290C23A400CE0118 /* CroppingComponent.swift */,
+				E381FE08290C23A400CE0118 /* FixedMoveComponent.swift */,
+				E381FE0C290C23A500CE0118 /* LabelComponent.swift */,
+				E381FE0A290C23A500CE0118 /* PolyominoComponent.swift */,
+				E381FE07290C23A400CE0118 /* RotationComponent.swift */,
+				E381FE03290C23A400CE0118 /* RuleComponent.swift */,
+				E381FE09290C23A400CE0118 /* SpawnAreaComponent.swift */,
+				E381FE06290C23A400CE0118 /* SpriteComponent.swift */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		E381FDF4290C237A00CE0118 /* Polymino */ = {
+			isa = PBXGroup;
+			children = (
+				E381FDFC290C239C00CE0118 /* CGExtensions.swift */,
+				E381FDFB290C239C00CE0118 /* Polyomino.swift */,
+				E381FDFE290C239C00CE0118 /* PolyominoCreator.swift */,
+				E381FDFD290C239C00CE0118 /* Tetris.swift */,
+			);
+			path = Polymino;
+			sourceTree = "<group>";
+		};
+		E381FE37290C25D700CE0118 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				E381FE39290C25EE00CE0118 /* SFIcons.swift */,
+				E381FE38290C25EE00CE0118 /* SpriteKit+Extensions.swift */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -138,9 +341,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = E381FDDB290C22C400CE0118 /* Build configuration list for PBXNativeTarget "Bricked" */;
 			buildPhases = (
+				470DE0FF72E05D25783F5849 /* [CP] Check Pods Manifest.lock */,
 				E381FDAA290C22C200CE0118 /* Sources */,
 				E381FDAB290C22C200CE0118 /* Frameworks */,
 				E381FDAC290C22C200CE0118 /* Resources */,
+				D3C76882909C7E53B1A1EA8E /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -155,6 +360,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = E381FDDE290C22C400CE0118 /* Build configuration list for PBXNativeTarget "BrickedTests" */;
 			buildPhases = (
+				85E30EF4FD63CD5DBC1CD3D7 /* [CP] Check Pods Manifest.lock */,
 				E381FDC3290C22C400CE0118 /* Sources */,
 				E381FDC4290C22C400CE0118 /* Frameworks */,
 				E381FDC5290C22C400CE0118 /* Resources */,
@@ -173,9 +379,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = E381FDE1290C22C400CE0118 /* Build configuration list for PBXNativeTarget "BrickedUITests" */;
 			buildPhases = (
+				7CD11C426AC89FB9D6291F68 /* [CP] Check Pods Manifest.lock */,
 				E381FDCD290C22C400CE0118 /* Sources */,
 				E381FDCE290C22C400CE0118 /* Frameworks */,
 				E381FDCF290C22C400CE0118 /* Resources */,
+				31A8E5A7C1A2FBCBEE0B1A58 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -235,11 +443,15 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E381FDBD290C22C200CE0118 /* Main.storyboard in Resources */,
-				E381FDB4290C22C200CE0118 /* GameScene.sks in Resources */,
+				E381FDE8290C233100CE0118 /* Sounds in Resources */,
+				E381FE2F290C240800CE0118 /* LaunchScreen.storyboard in Resources */,
+				E381FE2C290C23F000CE0118 /* TetrisCellTextures.atlas in Resources */,
+				E381FDEF290C235300CE0118 /* GameStartScene.sks in Resources */,
+				E381FDF0290C235300CE0118 /* Actions.sks in Resources */,
 				E381FDBF290C22C400CE0118 /* Assets.xcassets in Resources */,
-				E381FDC2290C22C400CE0118 /* LaunchScreen.storyboard in Resources */,
-				E381FDB6290C22C200CE0118 /* Actions.sks in Resources */,
+				E381FE30290C240800CE0118 /* Main.storyboard in Resources */,
+				E381FDED290C235300CE0118 /* GameOverScene.sks in Resources */,
+				E381FDEE290C235300CE0118 /* GameScene.sks in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -259,14 +471,146 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		31A8E5A7C1A2FBCBEE0B1A58 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Bricked-BrickedUITests/Pods-Bricked-BrickedUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Bricked-BrickedUITests/Pods-Bricked-BrickedUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Bricked-BrickedUITests/Pods-Bricked-BrickedUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		470DE0FF72E05D25783F5849 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Bricked-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		7CD11C426AC89FB9D6291F68 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Bricked-BrickedUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		85E30EF4FD63CD5DBC1CD3D7 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-BrickedTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D3C76882909C7E53B1A1EA8E /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Bricked/Pods-Bricked-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Bricked/Pods-Bricked-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Bricked/Pods-Bricked-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		E381FDAA290C22C200CE0118 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E381FDB8290C22C200CE0118 /* GameScene.swift in Sources */,
-				E381FDBA290C22C200CE0118 /* GameViewController.swift in Sources */,
-				E381FDB2290C22C200CE0118 /* AppDelegate.swift in Sources */,
+				E381FE1F290C23AD00CE0118 /* EntityManager.swift in Sources */,
+				E381FE15290C23A500CE0118 /* PolyominoComponent.swift in Sources */,
+				E381FE34290C243800CE0118 /* GameOverScene.swift in Sources */,
+				E381FE35290C243800CE0118 /* GameScene.swift in Sources */,
+				E381FDFF290C239C00CE0118 /* Polyomino.swift in Sources */,
+				E381FE36290C243800CE0118 /* GameStartScene.swift in Sources */,
+				E381FDF8290C239000CE0118 /* TetrisState.swift in Sources */,
+				E381FE2A290C23D200CE0118 /* AppDelegate.swift in Sources */,
+				E381FE11290C23A500CE0118 /* SpriteComponent.swift in Sources */,
+				E381FE01290C239C00CE0118 /* Tetris.swift in Sources */,
+				E381FE18290C23A500CE0118 /* CollisionCheckingComponent.swift in Sources */,
+				E381FE28290C23D200CE0118 /* GameConstants.swift in Sources */,
+				E381FE12290C23A500CE0118 /* RotationComponent.swift in Sources */,
+				E381FE17290C23A500CE0118 /* LabelComponent.swift in Sources */,
+				E381FE3A290C25EE00CE0118 /* SpriteKit+Extensions.swift in Sources */,
+				E381FE23290C23AD00CE0118 /* SpawnAreaEntity.swift in Sources */,
+				E381FE0E290C23A500CE0118 /* RuleComponent.swift in Sources */,
+				E381FE29290C23D200CE0118 /* GameViewController.swift in Sources */,
+				E381FE0F290C23A500CE0118 /* ArenaComponent.swift in Sources */,
+				E381FDFA290C239000CE0118 /* PauseState.swift in Sources */,
+				E381FE10290C23A500CE0118 /* CroppingComponent.swift in Sources */,
+				E381FE20290C23AD00CE0118 /* ScoreEntity.swift in Sources */,
+				E381FE22290C23AD00CE0118 /* PolyominoEntity.swift in Sources */,
+				E381FE02290C239C00CE0118 /* PolyominoCreator.swift in Sources */,
+				E381FE16290C23A500CE0118 /* CompositeSpriteComponent.swift in Sources */,
+				E381FE14290C23A500CE0118 /* SpawnAreaComponent.swift in Sources */,
+				E381FE24290C23AD00CE0118 /* ArenaEntity.swift in Sources */,
+				E381FE13290C23A500CE0118 /* FixedMoveComponent.swift in Sources */,
+				E381FE21290C23AD00CE0118 /* TetrisEntity.swift in Sources */,
+				E381FE3B290C25EE00CE0118 /* SFIcons.swift in Sources */,
+				E381FDF9290C239000CE0118 /* PlayState.swift in Sources */,
+				E381FE00290C239C00CE0118 /* CGExtensions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -301,25 +645,6 @@
 			targetProxy = E381FDD2290C22C400CE0118 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
-
-/* Begin PBXVariantGroup section */
-		E381FDBB290C22C200CE0118 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				E381FDBC290C22C200CE0118 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		E381FDC0290C22C400CE0118 /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				E381FDC1290C22C400CE0118 /* Base */,
-			);
-			name = LaunchScreen.storyboard;
-			sourceTree = "<group>";
-		};
-/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		E381FDD9290C22C400CE0118 /* Debug */ = {
@@ -438,6 +763,7 @@
 		};
 		E381FDDC290C22C400CE0118 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A3A552095D35E0BCF7563E0D /* Pods-Bricked.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -466,6 +792,7 @@
 		};
 		E381FDDD290C22C400CE0118 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 53677E13BF261AD3F396AED6 /* Pods-Bricked.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -494,6 +821,7 @@
 		};
 		E381FDDF290C22C400CE0118 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B648374BB6AA8FFCC9A056E4 /* Pods-BrickedTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -514,6 +842,7 @@
 		};
 		E381FDE0290C22C400CE0118 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8B78819D9107F96D06E9A678 /* Pods-BrickedTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -534,6 +863,7 @@
 		};
 		E381FDE2290C22C400CE0118 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D538716E8247D09C7F98DC0A /* Pods-Bricked-BrickedUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -552,6 +882,7 @@
 		};
 		E381FDE3290C22C400CE0118 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 91689C9E5FE695F5D79C963C /* Pods-Bricked-BrickedUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;

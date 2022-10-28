@@ -1,0 +1,6 @@
+framework module Pods_Bricked {
+  umbrella header "Pods-Bricked-umbrella.h"
+
+  export *
+  module * { export * }
+}

@@ -1,0 +1,16 @@
+PODS:
+  - SKSpriteButton (1.0.0)
+
+DEPENDENCIES:
+  - SKSpriteButton
+
+SPEC REPOS:
+  trunk:
+    - SKSpriteButton
+
+SPEC CHECKSUMS:
+  SKSpriteButton: abaaa49b4c97a84f7b9793caec56b86410736c2d
+
+PODFILE CHECKSUM: 4135ca953041b2f9a9f901020ffc50cc2302359d
+
+COCOAPODS: 1.11.3
