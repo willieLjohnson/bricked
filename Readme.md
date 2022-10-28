@@ -7,3 +7,14 @@ Tetris++ on iOS and iPadOS.
 - Much faster pace
 - Gravity for falling blocks
 - Classic Mode, Arcade Mode, Endless Mode
+
+## Cloning and Running Project
+
+
+```bash
+git clone https://github.com/willieLjohnson/bricked.git
+cd bricked
+
+pod install
+open Bricked.xcworkspace
+```
