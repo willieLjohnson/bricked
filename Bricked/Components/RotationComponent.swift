@@ -10,7 +10,7 @@ class RotationComponent: GKComponent {
         }
         for index in 0..<clockwiseTurnTranslations.count {
             let node = polyominoComponent.spriteComponents[index]
-            node.sprite.position = node.sprite.position.translate(by: clockwiseTurnTranslations[index])
+          node.sprite.position = node.sprite.frame.origin.translate(by: clockwiseTurnTranslations[index])
         }
       polyominoComponent.spriteComponents.first!.sprite.run(adjustSound)
     }

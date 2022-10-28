@@ -10,6 +10,7 @@ class PolyominoEntity: TetrisEntity {
   
   var eventDelegate: PolyominoEventDelegate?
   
+  
   override func update(deltaTime seconds: TimeInterval) {
     _ = components.map {
       $0.update(deltaTime: seconds)

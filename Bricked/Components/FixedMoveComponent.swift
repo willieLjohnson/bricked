@@ -70,7 +70,7 @@ class FixedMoveComponent: GKComponent {
     }
     
     _ = polyominoComponent.spriteComponents.map {
-      $0.sprite.position = $0.sprite.position.translate(by: translation)
+      $0.sprite.position = $0.sprite.frame.origin.translate(by: translation)
     }
     accumulatedTranslation = accumulatedTranslation.translate(by: translation)
   }

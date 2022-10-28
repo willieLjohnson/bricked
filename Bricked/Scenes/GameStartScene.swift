@@ -18,7 +18,8 @@ extension GameStartScene {
     if let title = childNode(withName: "Title") {
       let titleLetters = title.children
       for letter in titleLetters {
-        let randomColor = Tetris.allPossible.randomElement()!.color
+        let randomColor = Tetris.allPossible[Int.random(in: 0..<Tetris.allPossible.count, using: &gen)].color
+        
         for block in letter.children {
           guard let block = block as? SKSpriteNode else {
             return

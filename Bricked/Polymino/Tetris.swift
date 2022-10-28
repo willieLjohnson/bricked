@@ -118,8 +118,9 @@ struct Tetris: Polyomino {
     return 4
   }
   
-  
+
 }
+
 
 // MARK: - Initialization
 extension Tetris {

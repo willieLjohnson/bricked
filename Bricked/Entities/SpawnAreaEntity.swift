@@ -21,7 +21,7 @@ class SpawnAreaEntity: TetrisEntity {
     let scale = arena.scale
     let prototypes = creator.allPossible
     
-    let randomIndex = Int.random(in: 0..<prototypes.count)
+    let randomIndex = Int.random(in: 0..<prototypes.count, using: &gen)
     let chosenPrototype = prototypes[randomIndex]
 //    let chosenPrototype = prototypes.last!
     

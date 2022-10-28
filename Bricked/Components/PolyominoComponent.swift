@@ -1,12 +1,21 @@
 import GameplayKit
 import SpriteKit
 
+protocol Block {
+  var scale: CGFloat { get set }
+  var anchorPoint: CGPoint { get }
+}
+
+extension Block {
+  var anchorPoint: CGPoint { return .zero }
+}
+
+
 /// Special case of a `CompositeSpriteComponent`.
 /// Some of the polyomino-specific fields (for e.g.: scale, prototype)
 /// should just fit into PolyominoEntity, but instead I put them into
 /// a component for better reusability.
-class PolyominoComponent: CompositeSpriteComponent {
-  
+class PolyominoComponent: CompositeSpriteComponent, Block {
   /// Scale of each cell in the instantiated polyomino.
   var scale: CGFloat
   
@@ -26,6 +35,7 @@ class PolyominoComponent: CompositeSpriteComponent {
     
     return initialMidPoint
   }
+  
   
   /// Initializes a `PolyominoComponent` with the given texture (if any), scale and prototype.
   /// A prototype should be a `Polyomino` with unit scale.
@@ -61,5 +71,27 @@ class PolyominoComponent: CompositeSpriteComponent {
     backNode.position = CGPoint(x: scale/2, y: scale/2)
     skNode.addChild(backNode)
     return skNode
+  }
+}
+
+class BlockComponent: SpriteComponent, Block {
+  var scale: CGFloat = 0.0
+  
+  var color: UIColor
+  
+  var anchorPoint: CGPoint = CGPoint(x: 0.5, y: 0.5)
+  
+  init(scale: CGFloat, color: UIColor, position: CGPoint) {
+    self.scale = scale
+    self.color = color
+    super.init(withSpriteNode: PolyominoComponent.createPolyminoBlock(scale: scale, position: position, color: color))
+  }
+  
+  convenience init(polymino: PolyominoComponent) {
+    self.init(scale: polymino.scale, color: polymino.prototype.color, position: polymino.position)
+  }
+  
+  required init?(coder aDecoder: NSCoder) {
+    fatalError("init(coder:) has not been implemented")
   }
 }

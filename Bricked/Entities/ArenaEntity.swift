@@ -25,6 +25,9 @@ class ArenaEntity: TetrisEntity {
   
   weak var droppingPolyomino: PolyominoEntity?
   
+  var fallingPolyminos = [BlockComponent]()
+
+  
   var scale: CGFloat {
     return arenaComponent.sprite.size.width / CGFloat(GameConstants.HorizontalCellNum)
   }
@@ -67,7 +70,10 @@ class ArenaEntity: TetrisEntity {
     // use a container node so we can group the animation.
     let containerNode = SKNode()
     arenaComponent.sprite.addChild(containerNode)
+    var highestRowIndex = 0
+    var rowsCleared = rows.count
     for rowIndex in rows {
+      highestRowIndex = rowIndex > highestRowIndex ? rowIndex : highestRowIndex
       _ = nodesBuckets[rowIndex].map {
         node in
         node.removeFromParent()
@@ -83,24 +89,15 @@ class ArenaEntity: TetrisEntity {
     containerNode.run(clearAnimation) {
       [unowned self] in
       containerNode.removeFromParent()
-      self.compress()
+      self.compress(highestRowIndex: highestRowIndex, rowsCleared: rows.count)
     }
   }
   
-  func compress() {
-    let numRows = GameConstants.VerticalCellNum
-    for rowIndex in 0..<numRows {
-      var currentRow = rowIndex
-      if nodesBuckets[rowIndex].isEmpty {
-        while nodesBuckets[currentRow].isEmpty {
-          currentRow += 1
-          if currentRow == numRows {
-            return
-          }
-        }
-        descend(rowIndex: currentRow, by: currentRow - rowIndex)
-        nodesBuckets[rowIndex] = nodesBuckets[currentRow]
-        nodesBuckets[currentRow].removeAll()
+  func compress(highestRowIndex: Int, rowsCleared: Int) {
+    for emptyRow in 0..<rowsCleared {
+      let startRow = highestRowIndex + 1 - emptyRow
+      if !nodesBuckets[startRow].isEmpty {
+        descend(rowIndex: startRow, by: 1)
       }
     }
   }
@@ -110,9 +107,15 @@ class ArenaEntity: TetrisEntity {
     guard index >= 0 && index < nodesBuckets.count else {
       return
     }
-    let row = nodesBuckets[index]
-    for node in row {
-      node.position = node.position.translate(by: CGPoint(x: 0, y: -scale))
+    let numRows = GameConstants.VerticalCellNum
+    for rowIndex in index..<numRows {
+      let row = nodesBuckets[rowIndex]
+     
+      for node in row {
+        node.position = node.frame.origin.translate(by: CGPoint(x: 0, y: -scale * CGFloat(level)))
+      }
+      nodesBuckets[rowIndex - 1] = nodesBuckets[rowIndex]
+      nodesBuckets[rowIndex].removeAll()
     }
   }
 }

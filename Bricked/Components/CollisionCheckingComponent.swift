@@ -34,7 +34,7 @@ class CollisionCheckingComponent: GKComponent {
     
     return polyominoComponent.spriteComponents.filter {
       var noHit = true
-      let nextPosition = $0.sprite.position.translate(by: CGPoint(x: 0, y: -polyominoComponent.scale))
+      let nextPosition = $0.sprite.frame.origin.translate(by: CGPoint(x: 0, y: -polyominoComponent.scale))
       if nextPosition.y < -(bbox.height / 2) {
         noHit = false
       }
@@ -54,7 +54,7 @@ class CollisionCheckingComponent: GKComponent {
     
     return polyominoComponent.spriteComponents.filter {
       var noHit = true
-      let nextPosition = $0.sprite.position.translate(by: CGPoint(x: -polyominoComponent.scale, y: 0))
+      let nextPosition = $0.sprite.frame.origin.translate(by: CGPoint(x: -polyominoComponent.scale, y: 0))
       if nextPosition.x < -(bbox.width / 2) {
         noHit = false
       }
@@ -74,7 +74,7 @@ class CollisionCheckingComponent: GKComponent {
     
     return polyominoComponent.spriteComponents.filter {
       var noHit = true
-      let nextPosition = $0.sprite.position.translate(by: CGPoint(x: polyominoComponent.scale, y: 0))
+      let nextPosition = $0.sprite.frame.origin.translate(by: CGPoint(x: polyominoComponent.scale, y: 0))
       if nextPosition.x > (bbox.width / 2 - polyominoComponent.scale) {
         noHit = false
       }
@@ -104,7 +104,7 @@ class CollisionCheckingComponent: GKComponent {
     for index in 0..<translations.count {
       let node = polyominoComponent.spriteComponents[index]
       let translation = translations[index]
-      let nextPosition = node.sprite.position.translate(by: translation)
+      let nextPosition = node.sprite.frame.origin.translate(by: translation)
       if nextPosition.x > (bbox.width / 2 - polyominoComponent.scale) ||
           nextPosition.x < -(bbox.width / 2) ||
           nextPosition.y < -(bbox.height / 2 - polyominoComponent.scale) {

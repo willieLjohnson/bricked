@@ -36,7 +36,7 @@ extension GameOverScene {
       self.view?.presentScene(gameScene, transition: transition)
     }
     restartButton.color = .systemIndigo
-    restartButton.drawBorder(color: .black, width: 4, radius: 10)
+    restartButton.drawBorder(color: .black, width: 4, radius: 5)
   }
   
   func initializeMenuButton() {
@@ -50,7 +50,7 @@ extension GameOverScene {
       self.view?.presentScene(gameScene, transition: transition)
     }
     menuButton.color = .systemIndigo
-    menuButton.drawBorder(color: .black, width: 4, radius: 10)
+    menuButton.drawBorder(color: .black, width: 4, radius: 5)
   }
 }
 
@@ -60,6 +60,7 @@ extension GameOverScene {
     guard let scoreLabel = childNode(withName: GameConstants.EndgameScoreLabelKey) as? SKLabelNode else {
       return
     }
+    
     let labelComponent = LabelComponent(withLabelNode: scoreLabel)
     let scoreEntity = ScoreEntity(withComponents: [labelComponent], withEntityManager: entityManager)
     scoreEntity.score = score
