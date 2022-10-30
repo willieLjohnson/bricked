@@ -35,8 +35,6 @@ extension GameOverScene {
       let transition = SKTransition.moveIn(with: .down, duration: 0.3)
       self.view?.presentScene(gameScene, transition: transition)
     }
-    restartButton.color = .systemIndigo
-    restartButton.drawBorder(color: .black, width: 4, radius: 5)
   }
   
   func initializeMenuButton() {
@@ -46,11 +44,9 @@ extension GameOverScene {
       
       let gameScene = SKScene(fileNamed: GameConstants.GameStartScene)!
       gameScene.scaleMode = .aspectFit
-      let transition = SKTransition.moveIn(with: .up, duration: 0.5)
+      let transition = SKTransition.moveIn(with: .up, duration: 0.3)
       self.view?.presentScene(gameScene, transition: transition)
     }
-    menuButton.color = .systemIndigo
-    menuButton.drawBorder(color: .black, width: 4, radius: 5)
   }
 }
 

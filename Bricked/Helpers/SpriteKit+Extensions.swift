@@ -86,3 +86,11 @@ extension UIColor {
     )
   }
 }
+
+extension UIColor {
+  
+  // RGBA using 255 scale; a uses 100 scale
+  static func RGBA(r: CGFloat, g: CGFloat, b: CGFloat, a: CGFloat) -> UIColor {
+    return UIColor(red: r/255, green: g/255, blue: b/255, alpha: a/100)
+  }
+}

@@ -6,6 +6,7 @@ import SKSpriteButton
 class GameScene: SKScene {
   
   let entityManager = EntityManager()
+    
   
   lazy var stateMachine: GKStateMachine = {
     let playState = PlayState(withGame: self)
@@ -19,9 +20,8 @@ class GameScene: SKScene {
     return childNode(withName: GameConstants.GameStartSceneMusic) as! SKAudioNode
   }
   
-  var pauseNode: SKSpriteNode {
-    return childNode(withName: GameConstants.PauseAreaKey) as! SKSpriteNode
-  }
+
+  var pauseNode: SKSpriteButton!
   
   // Buttons
   private var leftButton: SKSpriteButton!
@@ -46,23 +46,13 @@ extension GameScene {
     initializeArena()
     initializeButtons()
     initializeScore()
-    
+    initalizePauseNode()
+
     entityManager.spawnArea.spawnPolyominoEntity(withDelegate: self)
     entityManager.spawnArea.stagePolyomino()
     entityManager.spawnArea.spawnPolyominoEntity(withDelegate: self)
     
     stateMachine.enter(PauseState.self)
-  }
-  
-  override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
-    guard stateMachine.currentState is PauseState else {
-      return
-    }
-    for touch in touches {
-      if pauseNode.frame.contains(touch.location(in: self)) {
-        stateMachine.enter(PlayState.self)
-      }
-    }
   }
 }
 
@@ -84,8 +74,8 @@ extension GameScene: PolyominoEventDelegate {
       return
     }
     gameOverScene.score = entityManager.scoreLabel.score
-    gameOverScene.scaleMode = .aspectFit
-    let transition = SKTransition.moveIn(with: .right, duration: 0.5)
+    gameOverScene.scaleMode = .aspectFill
+    let transition = SKTransition.moveIn(with: .right, duration: 0.3)
     self.view?.presentScene(gameOverScene, transition: transition)
   }
 }
@@ -167,6 +157,45 @@ private extension GameScene {
   
   func getPauseButton() -> SKSpriteButton {
     return childNode(withName: GameConstants.PauseButtonKey) as! SKSpriteButton
+  }
+  
+  func getPauseNode() -> SKSpriteButton {
+    return childNode(withName: GameConstants.PauseAreaKey) as! SKSpriteButton
+  }
+  
+  func initalizePauseNode() {
+    pauseNode = getPauseNode()
+    pauseNode.drawBorder(color: GameConstants.palette.primary, width: 4, radius: 45)
+    
+    let menuButton = pauseNode.childNode(withName: GameConstants.MenuButton) as! SKSpriteButton
+    let restartButton = pauseNode.childNode(withName: GameConstants.RestartButton) as! SKSpriteButton
+    
+    menuButton.addTouchesBeganHandler {
+      [unowned self]
+      (_, _) in
+      
+      let gameScene = SKScene(fileNamed: GameConstants.GameStartScene)!
+      gameScene.scaleMode = .aspectFit
+      let transition = SKTransition.moveIn(with: .up, duration: 0.3)
+      self.view?.presentScene(gameScene, transition: transition)
+    }
+    restartButton.addTouchesBeganHandler {
+      [unowned self]
+      (_, _) in
+      let gameScene = SKScene(fileNamed: GameConstants.GameScene) as! GameScene
+      gameScene.scaleMode = .aspectFit
+
+      let transition = SKTransition.flipVertical(withDuration: 0.3)
+      self.view?.presentScene(gameScene, transition: transition)
+      gameScene.stateMachine.enter(PlayState.self)
+    }
+    
+    pauseNode.addTouchesBeganHandler {
+      [unowned self]
+      (_, _) in
+      pauseNode.tapFeedback(intensity: 4)
+      stateMachine.enter(PlayState.self)
+    }
   }
   
   func initializeLeftButton() {

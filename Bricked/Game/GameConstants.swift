@@ -1,4 +1,5 @@
 import CoreGraphics
+import UIKit
 
 struct GameConstants {
   static let HorizontalCellNum: Int = 14
@@ -49,4 +50,20 @@ struct GameConstants {
   static let CurrentScoreKey = "CurrentScore"
   static let ProceedToNextLevelFact = "ProceedToNextLevel"
   static let NumScoreBeforeProceeding = 20
+  static let palette: Palette = .init(
+    accent: .RGBA(r: 255, g: 221, b: 0, a: 100),
+    primary: .RGBA(r: 245, g: 93, b: 62, a: 100),
+    secondary: .RGBA(r: 4, g: 139, b: 168, a: 100),
+    light: .RGBA(r: 255, g: 255, b: 255, a: 100),
+    dark: .RGBA(r: 0, g: 0, b: 0, a: 100)
+  )
+}
+
+
+struct Palette {
+  var accent: UIColor
+  var primary: UIColor
+  var secondary: UIColor
+  var light: UIColor
+  var dark: UIColor
 }
