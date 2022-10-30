@@ -56,7 +56,7 @@ struct Tetris: Polyomino {
       ], anchor: CGPoint(x: 0.5, y: 0.5), color: .gray), // V
       Tetris(points: [
         CGPoint(x: 0, y: 0),
-      ], anchor: CGPoint(x: 0, y: 0), color: .systemIndigo), // .
+      ], anchor: CGPoint(x: 0, y: 0), color: .systemTeal), // .
       Tetris(points: [
         CGPoint(x: 0, y: 0),
         CGPoint(x: 1, y: 1),
@@ -85,21 +85,16 @@ struct Tetris: Polyomino {
         CGPoint(x: 1, y: -1),
         CGPoint(x: 0, y: 1),
         CGPoint(x: 1, y: 1),
-      ], anchor: CGPoint(x: 0, y: 0), color: .magenta), // C
+      ], anchor: CGPoint(x: 0, y: 0), color: .lightGray), // C
 
       Tetris(points: [
         CGPoint(x: 0, y: 0),
         CGPoint(x: 1, y: 1),
-        CGPoint(x: -1, y: -1),
-      ], anchor: CGPoint(x: 0, y: 0), color: .systemIndigo), // /
-      Tetris(points: [
-        CGPoint(x: 0, y: 0),
-        CGPoint(x: 1, y: 1),
-      ], anchor: CGPoint(x: 0, y: 0), color: .systemIndigo), // .'
+      ], anchor: CGPoint(x: 0.5, y: 0.5), color: .systemIndigo), // .'
       Tetris(points: [
         CGPoint(x: 0, y: 0),
         CGPoint(x: 0, y: 1),
-      ], anchor: CGPoint(x: 0, y: 0), color: .blue), // i
+      ], anchor: CGPoint(x: 0.5, y: 0.5), color: .blue), // i
     ]
   }
   

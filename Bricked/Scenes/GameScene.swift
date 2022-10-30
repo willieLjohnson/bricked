@@ -173,7 +173,7 @@ private extension GameScene {
     menuButton.addTouchesBeganHandler {
       [unowned self]
       (_, _) in
-      
+      pauseNode.tapFeedback(intensity: 3)
       let gameScene = SKScene(fileNamed: GameConstants.GameStartScene)!
       gameScene.scaleMode = .aspectFit
       let transition = SKTransition.moveIn(with: .up, duration: 0.3)
@@ -185,6 +185,7 @@ private extension GameScene {
       let gameScene = SKScene(fileNamed: GameConstants.GameScene) as! GameScene
       gameScene.scaleMode = .aspectFit
 
+      pauseNode.tapFeedback(intensity: 5)
       let transition = SKTransition.flipVertical(withDuration: 0.3)
       self.view?.presentScene(gameScene, transition: transition)
       gameScene.stateMachine.enter(PlayState.self)

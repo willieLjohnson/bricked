@@ -42,15 +42,16 @@ private extension GameStartScene {
   func initializeStartButton() {
     gameStartButton = getStartButton()
     gameStartButton.moveType = .alwaysHeld
-    gameStartButton.tappedTexture = getSFIcon(SFIStrings.playFill, color: .orange).asSKTexture()
-    gameStartButton.texture = getSFIcon(SFIStrings.playFill, color: .cyan).asSKTexture()
-    gameStartButton.color = .cyan
+    gameStartButton.tappedTexture = getSFIcon(SFIStrings.playFill, color: GameConstants.palette.primary).asSKTexture()
+    gameStartButton.texture = getSFIcon(SFIStrings.playFill, color: GameConstants.palette.primary).asSKTexture()
+    gameStartButton.color = GameConstants.palette.primary
     gameStartButton.addTouchesUpHandler {
       [unowned self]
       (_, _) in
-      
+  
       let gameScene = SKScene(fileNamed: GameConstants.GameScene)!
       gameScene.scaleMode = .aspectFit
+      gameStartButton.tapFeedback(intensity: 3)
       let transition = SKTransition.moveIn(with: .up, duration: 0.3)
       self.view?.presentScene(gameScene, transition: transition)
     }

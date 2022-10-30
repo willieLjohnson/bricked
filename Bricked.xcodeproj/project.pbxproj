@@ -232,13 +232,13 @@
 		E381FDB0290C22C200CE0118 /* Bricked */ = {
 			isa = PBXGroup;
 			children = (
+				E381FDE4290C22D200CE0118 /* Supporting Files */,
 				E381FE37290C25D700CE0118 /* Helpers */,
 				E381FDF4290C237A00CE0118 /* Polymino */,
 				E381FDF3290C236C00CE0118 /* Components */,
 				E381FDF2290C236400CE0118 /* Entities */,
 				E381FDF1290C235C00CE0118 /* States */,
 				E381FDE5290C22F300CE0118 /* Scenes */,
-				E381FDE4290C22D200CE0118 /* Supporting Files */,
 				E381FDE6290C230700CE0118 /* Game */,
 			);
 			path = Bricked;
